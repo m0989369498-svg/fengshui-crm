@@ -1,0 +1,17 @@
+{
+  "name": "fengshui-crm-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "不帶羅盤的風水師 CRM — 開源體驗版（一鍵啟動前後端）",
+  "license": "MIT",
+  "scripts": {
+    "setup": "npm install && npm --prefix backend install && npm --prefix frontend install",
+    "dev": "concurrently -n be,fe -c blue,magenta \"npm --prefix backend run dev\" \"npm --prefix frontend run dev\"",
+    "build": "npm --prefix frontend run build",
+    "start": "concurrently -n be,fe -c blue,magenta \"npm --prefix backend start\" \"node frontend/.output/server/index.mjs\"",
+    "test": "npm --prefix backend test"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

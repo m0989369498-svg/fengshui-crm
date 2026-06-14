@@ -1,10 +1,22 @@
 # 不帶羅盤的風水師 · CRM 體驗版 🧭
 
+![CI](https://github.com/m0989369498-svg/fengshui-crm/actions/workflows/ci.yml/badge.svg)
+![license](https://img.shields.io/badge/license-MIT-green)
+![node](https://img.shields.io/badge/node-%E2%89%A520-blue)
+
 > 結合**東方玄學**與**現代行為科學**的 AI 業務 CRM。輸入顧客的姓名／手機／生辰，系統把命理訊號**翻譯成業務員可以直接照做的白話成交策略**——不丟一堆看不懂的八字術語，只給你「這個人怎麼談、怎麼成交」。
 
 **這是開源體驗版**：純前後端、**零外部依賴、零金鑰、clone 即跑**。命理計算全在本機用 JavaScript 真實運算；AI 策略內建零設定示範產生器（想用真 AI 一行設定即可切 OpenAI / DeepSeek / Ollama）。
 
 <p align="center"><i>黑金奢華主題 · 繁簡即時切換 · 逐字串流輸出</i></p>
+
+## 📸 畫面
+
+| 戰略分析 | AI 讀心策略 |
+|---|---|
+| ![dashboard](docs/01-dashboard.png) | ![strategy](docs/02-strategy.png) |
+| **商業擇日** | **手機版** |
+| ![calendar](docs/03-calendar.png) | <img src="docs/04-mobile.png" width="220" /> |
 
 ---
 
@@ -28,14 +40,17 @@
 
 需求：**Node.js ≥ 20**
 
+**一鍵啟動（推薦）** — 在根目錄裝一次、一條指令同時起前後端：
 ```bash
-git clone <this-repo> fengshui-crm && cd fengshui-crm
+git clone https://github.com/m0989369498-svg/fengshui-crm.git && cd fengshui-crm
+npm run setup     # 裝根目錄 + backend + frontend
+npm run dev       # 同時啟動後端(:3001) + 前端(:3000)
+```
 
-# 後端（:3001）
-cd backend && npm install && npm start
-
-# 前端（:3000，另開一個終端機）
-cd frontend && npm install && npm run dev
+或分開啟動（兩個終端機）：
+```bash
+cd backend  && npm install && npm start   # :3001
+cd frontend && npm install && npm run dev  # :3000
 ```
 
 打開 **http://localhost:3000** → 填姓名+手機+業務問題 → 按「產生讀心策略」。**完全零設定即可玩**（用內建示範 AI）。
