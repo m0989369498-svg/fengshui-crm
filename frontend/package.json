@@ -1,0 +1,22 @@
+{
+  "name": "fengshui-crm-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "不帶羅盤的風水師 CRM — 前端戰略儀表板 (Nuxt 3, 黑金主題)",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^6.12.2",
+    "nuxt": "^3.13.2"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.5.5",
+    "opencc-js": "^1.3.1",
+    "pinia": "^2.2.4"
+  }
+}

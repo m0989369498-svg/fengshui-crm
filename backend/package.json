@@ -1,0 +1,19 @@
+{
+  "name": "fengshui-crm-demo-backend",
+  "version": "1.0.0",
+  "description": "不帶羅盤的風水師 CRM — 開源體驗版後端（自包含，零外部依賴）",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node test/engines.test.mjs"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "lunar-javascript": "^1.7.7"
+  }
+}
