@@ -27,7 +27,7 @@ function submitVoice() {
 <template>
   <section class="card p-6">
     <h2 class="heading text-base mb-1">{{ t('顧客資料') }}</h2>
-    <p class="text-xs text-gold-200/50 mb-4">{{ t('資料越完整，策略越精準（系統會自動依完整度降級分析）') }}</p>
+    <p class="text-xs text-gold-200/50 mb-4">{{ t('資料越完整，可分析的維度越多（系統會自動依完整度調整分析層級）') }}</p>
 
     <div class="grid grid-cols-2 gap-4">
       <div>
@@ -77,7 +77,7 @@ function submitVoice() {
     <div class="flex flex-wrap items-center gap-3 mt-4">
       <button class="btn-gold" :disabled="props.loading" @click="emit('submit')">
         <span v-if="props.loading" class="animate-pulse">{{ t('推演中…') }}</span>
-        <span v-else>{{ t('產生讀心策略') }}</span>
+        <span v-else>{{ t('產生溝通建議') }}</span>
       </button>
     </div>
   </section>
